@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+  }
+
+.header{
+    background-color:  #00264d;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+h1{
+    font-family: "Jersey 25", sans-serif;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: rgb(54, 88, 122);
+}
+
+body{
+    background: rgb(3, 49, 95);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.jogo__container{
+    width: 900px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.jogo__conteudo{
+    width: 550px;
+}
+
+.jogo__conteudo h2{
+    margin-bottom: 1rem;
+    font-size: 2.1rem;
+    font-family: "Poppins", sans-serif;
+    color: whitesmoke;
+}
+
+.jogo__conteudo h3{
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    color: gray;
+}
+
+.respostas{
+    margin-bottom: 2rem;
+    font-size: 2.8rem;
+}
+
+.respostaCerta{
+    color: green;
+}
+
+.respostaErrada{
+    color:red;
+}
+
+.input__tentativa{
+    border: 0;
+    width: 70%;
+    height: 3.5rem;
+    padding-left: .8rem;
+    font-style: italic;
+    font-size: 2rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+::placeholder{
+    color: #cacaca;
+}
+
+.input__tentativa:focus{
+   outline: 3px orange solid;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.secao__btn{
+    width: 70%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+#btnPalpite , #btnNovoJogo{
+    padding: 1.2rem 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: 0;
+    border-radius: .8rem;
+}
+
+#btnPalpite:hover , #btnNovoJogo:hover{
+    background-color: #00264d;
+    color: orange;
+    cursor: pointer;
+}
+
+.quantidade__tentativas{
+    margin-top: 1.5rem;
+}
+
+.quantidade__numeros{
+    margin-top: 1rem;
+}
+
+.quantidade__tentativas , .quantidade__numeros {
+    color: #7fffd4;
+    letter-spacing: 1px;
+}
+
+.img__random{
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background-color: rgb(54, 88, 122);
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.img__random img {
+    max-width: 100%; 
+    max-height: 111%;
+}
+
+.footer{
+    background-color: #00264d;
+    text-align: center;
+    padding: 2rem 0;
+    color: rgb(71, 131, 190);
+}
+
+.footer a{
+    text-decoration: none;
+    padding-left: 1rem;
+    color: rgb(71, 131, 190);
+}
+
+.footer a:hover{
+    color: #7fffd4;
+}
+
+
+@media (max-width: 900px){
+
+    .header{
+        width: 100%;
+    }
+
+    .jogo__container{
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+  
+    } 
+
+    .jogo__conteudo{
+        width: 100%;
+    }
+
+    .input__tentativa{
+        width: 100%;
+    }
+
+    .secao__btn{
+        width: 100%;
+    }
+
+    #btnPalpite , #btnNovoJogo{
+        width: 45%;
+        gap: 5%;
+    }
+
+    .footer{
+        width: 100%;
+    }
+
+    .img__random {
+        max-width: 100%; 
+    }
+
+}
